@@ -6,6 +6,11 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: "Raynell's webpage",
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
