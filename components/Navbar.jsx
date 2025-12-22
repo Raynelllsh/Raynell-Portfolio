@@ -7,9 +7,9 @@ import { usePathname } from "next/navigation";
 const basePath = "/Raynell-Portfolio"; // Must match next.config.mjs
 
 // FIX: Use string paths relative to the public folder
-const Icon = `${basepath}/assets/pictures/crop-photo.jpg`;
-const LinkedinLogo = `${basepath}/assets/pictures/linkedin.svg`;
-const GithubLogo = `${basepath}/assets/pictures/github.svg`;
+const Icon = `${basePath}/assets/pictures/crop-photo.jpg`;
+const LinkedinLogo = `${basePath}/assets/pictures/linkedin.svg`;
+const GithubLogo = `${basePath}/assets/pictures/github.svg`;
 
 const NavLink = ({ href, text, isActive }) => (
   <Link
