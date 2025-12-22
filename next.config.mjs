@@ -6,7 +6,7 @@ const nextConfig = {
   },
   // If your repo is NOT at the root (e.g., username.github.io/repo-name),
   // you must add the basePath below.
-  // basePath: "/repo-name", 
+   basePath: "/Raynell-Portfolio", 
 };
 
 export default nextConfig;
