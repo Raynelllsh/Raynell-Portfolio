@@ -1,30 +1,32 @@
 import Image from "next/image";
 
 // --- Asset Imports ---
-const PythonLogo = "/assets/pictures/Python-logo.png";
-const CppLogo = "/assets/pictures/ISO_C++_Logo.png";
-const JavaLogo = "/assets/pictures/java-logo.svg";
-const JSLogo = "/assets/pictures/javascript-logo.svg";
-const ReactLogo = "/assets/pictures/react.svg";
-const TailwindLogo = "/assets/pictures/Tailwind_CSS_Logo.png";
-const MySQLLogo = "/assets/pictures/mysql-logo.svg";
-const GitLogo = "/assets/pictures/git-icon-logo.svg";
-const ViteLogo = "/assets/pictures/vitejs.svg";
-const AWSLogo = "/assets/pictures/aws.svg";
-const SCLogo = "/assets/pictures/simplified-chinese-character.png";
-const EngLogo = "/assets/pictures/letter-a-text-variant.svg";
-const TCLogo = "/assets/pictures/Traditional_chinese.svg.png";
-const ExpressLogo = "/assets/pictures/express-js-logo-png_seeklogo-339850.png";
-const FlaskLogo = "/assets/pictures/Flask.svg";
-const MongoLogo = "/assets/pictures/mongodb-logo.svg";
-const TypeScriptLogo = "/assets/pictures/typescript-logo.svg";
-const NextLogo = "/assets/pictures/next-logo.svg";
-const FirebaseLogo = "/assets/pictures/firebase-logo.svg";
-const LinuxLogo = "/assets/pictures/linux-logo.svg";
-const TerraformLogo = "/assets/pictures/terraform-logo.svg";
-const AnsibleLogo = "/assets/pictures/ansible-logo.svg";
-const DockerLogo = "/assets/pictures/docker-logo.svg";
-const JenkinsLogo = "/assets/pictures/jenkins-logo.svg";
+basepath = "/Raynell-Portfolio"; // Must match next.config.mjs
+
+const PythonLogo = `${basepath}/assets/pictures/Python-logo.png`;
+const CppLogo = `${basepath}/assets/pictures/ISO_C++_Logo.png`;
+const JavaLogo = `${basepath}/assets/pictures/java-logo.svg`;
+const JSLogo = `${basepath}/assets/pictures/javascript-logo.svg`;
+const ReactLogo = `${basepath}/assets/pictures/react.svg`;
+const TailwindLogo = `${basepath}/assets/pictures/Tailwind_CSS_Logo.png`;
+const MySQLLogo = `${basepath}/assets/pictures/mysql-logo.svg`;
+const GitLogo = `${basepath}/assets/pictures/git-icon-logo.svg`;
+const ViteLogo = `${basepath}/assets/pictures/vitejs.svg`;
+const AWSLogo = `${basepath}/assets/pictures/aws.svg`;
+const SCLogo = `${basepath}/assets/pictures/simplified-chinese-character.png`;
+const EngLogo = `${basepath}/assets/pictures/letter-a-text-variant.svg`;
+const TCLogo = `${basepath}/assets/pictures/Traditional_chinese.svg.png`;
+const ExpressLogo = `${basepath}/assets/pictures/express-js-logo-png_seeklogo-339850.png`;
+const FlaskLogo = `${basepath}/assets/pictures/Flask.svg`;
+const MongoLogo = `${basepath}/assets/pictures/mongodb-logo.svg`;
+const TypeScriptLogo = `${basepath}/assets/pictures/typescript-logo.svg`;
+const NextLogo = `${basepath}/assets/pictures/next-logo.svg`;
+const FirebaseLogo = `${basepath}/assets/pictures/firebase-logo.svg`;
+const LinuxLogo = `${basepath}/assets/pictures/linux-logo.svg`;
+const TerraformLogo = `${basepath}/assets/pictures/terraform-logo.svg`;
+const AnsibleLogo = `${basepath}/assets/pictures/ansible-logo.svg`;
+const DockerLogo = `${basepath}/assets/pictures/docker-logo.svg`;
+const JenkinsLogo = `${basepath}/assets/pictures/jenkins-logo.svg`;
 
 // --- Components ---
 

@@ -9,7 +9,9 @@ import "react-pdf/dist/Page/TextLayer.css";
 // Configure worker locally
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
-const resumeUrl = "/assets/files/CV.pdf";
+const basePath = "/Raynell-Portfolio"; // Must match next.config.mjs
+const resumeUrl = `${basePath}/assets/files/CV.pdf`;
+
 
 export default function ResumeViewer() {
   const [numPages, setNumPages] = useState(null);

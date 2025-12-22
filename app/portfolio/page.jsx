@@ -1,16 +1,18 @@
 import Image from "next/image";
 
-const HKOLogo = '/assets/pictures/Hong_Kong_Observatory_Logo.svg';
-const PSLogo = '/assets/pictures/Primal-solutions.png';
-const GEOLogo = '/assets/pictures/polyugeo_logo.jpg';
-const BMCLogo = '/assets/pictures/engl_new.png';
-const MonopolyLogo = '/assets/pictures/monopoly.png';
-const TMSLogo = '/assets/pictures/task.png';
-const OSSLogo = '/assets/pictures/online-shopping.png';
-const ETFLogo = '/assets/pictures/etf.png';
-const MSALogo = '/assets/pictures/MSA.jpg';
-const APSSLogo = '/assets/pictures/APSS.jpg';
-const AlphabagLogo = '/assets/pictures/alphabag-logo.png';
+const basePath = "/Raynell-Portfolio"; // Must match next.config.mjs
+
+const HKOLogo = `${basePath}/assets/pictures/Hong_Kong_Observatory_Logo.svg`;
+const PSLogo = `${basePath}/assets/pictures/Primal-solutions.png`;
+const GEOLogo = `${basePath}/assets/pictures/polyugeo_logo.jpg`;
+const BMCLogo = `${basePath}/assets/pictures/engl_new.png`;
+const MonopolyLogo = `${basePath}/assets/pictures/monopoly.png`;
+const TMSLogo = `${basePath}/assets/pictures/task.png`;
+const OSSLogo = `${basePath}/assets/pictures/online-shopping.png`;
+const ETFLogo = `${basePath}/assets/pictures/etf.png`;
+const MSALogo = `${basePath}/assets/pictures/MSA.jpg`;
+const APSSLogo = `${basePath}/assets/pictures/APSS.jpg`;
+const AlphabagLogo = `${basePath}/assets/pictures/alphabag-logo.png`;
 
 const EventBox = ({ image, name }) => (
   <div className="

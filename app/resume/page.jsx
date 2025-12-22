@@ -3,6 +3,7 @@
 
 import dynamic from "next/dynamic";
 
+
 // Dynamically import the viewer with SSR disabled
 const ResumeViewer = dynamic(() => import("@/components/ResumeViewer"), {
   ssr: false,
