@@ -5,7 +5,7 @@
   .home-background {
     /* Ensure this image is in public/assets/pictures/ */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("/assets/pictures/bio-page-pic.jpg");
+      url("/Raynell-Portfolio/assets/pictures/bio-page-pic.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

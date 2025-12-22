@@ -4,7 +4,7 @@ import Image from "next/image";
 
 // --- Asset Imports ---
 // FIX 1: Add 'const' and fix the capitalization (optional but recommended)
-const basePath = "/raynells-website"; // Must match next.config.mjs
+const basePath = "/Raynell-Portfolio"; // Must match next.config.mjs
 
 // FIX 2: Use the variable correctly
 const PythonLogo = `${basePath}/assets/pictures/Python-logo.png`;

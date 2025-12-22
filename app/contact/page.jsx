@@ -5,7 +5,7 @@ import Image from "next/image";
 // FIX: Use string path for public assets
 const basePath = "/Raynell-Portfolio"; // Must match next.config.mjs
 
-const GIF = `${basePath}/assets/pictures/sending-mail.gif`;
+const GIF = `${basePath}/assets/pictures/sending-mail.GIF`;
 
 export default function Contact() {
   const [status, setStatus] = useState(null);
