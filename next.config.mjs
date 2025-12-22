@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  output: "export",  // <=== Enables static exports
+  images: {
+    unoptimized: true, // <=== Required for GitHub Pages
+  },
+  // If your repo is NOT at the root (e.g., username.github.io/repo-name),
+  // you must add the basePath below.
+  // basePath: "/repo-name", 
 };
 
 export default nextConfig;
