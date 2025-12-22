@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-basepath = "/Raynell-Portfolio"; // Must match next.config.mjs
+const basePath = "/Raynell-Portfolio"; // Must match next.config.mjs
 
 // FIX: Use string paths relative to the public folder
 const Icon = `${basepath}/assets/pictures/crop-photo.jpg`;

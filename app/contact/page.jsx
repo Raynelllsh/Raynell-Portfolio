@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 // FIX: Use string path for public assets
-basePath = "/Raynell-Portfolio"; // Must match next.config.mjs
+const basePath = "/Raynell-Portfolio"; // Must match next.config.mjs
 
 const GIF = `${basePath}/assets/pictures/sending-mail.gif`;
 
