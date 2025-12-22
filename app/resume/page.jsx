@@ -4,11 +4,13 @@ import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 
-// Configure worker (Standard for Next.js + React-PDF)
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+// app/resume/page.jsx
+// Ensure strict version matching to avoid version mismatch errors
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+
 
 // --- Configuration ---
-const resumeUrl = "/assets/files/Raynell's_CV.pdf"; 
+const resumeUrl = "./assets/files/CV.pdf"; 
 
 export default function Resume() {
   const [numPages, setNumPages] = useState(null);
@@ -35,12 +37,15 @@ export default function Resume() {
 
   return (
     // FIX: 'pt-40' adds 10rem (160px) of space at the top so the Navbar doesn't cover content
-    <main className="min-h-screen flex flex-col items-center pt-40 pb-16 px-4 bg-slate-50 dark:bg-slate-950">
+    <main className="min-h-screen flex flex-col items-center pt-40 pb-16 px-4 min-h-screen bg-black text-white">
       
       {/* 1. Header Section */}
-      <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-10 tracking-tight">
-        My Resume
-      </h1>
+      <div className="flex items-center gap-4 mb-10">
+            <h2 className="text-4xl font-bold tracking-tight">
+              My <span className="text-yellow-500">Resume</span>
+            </h2>
+            <div className="h-1 flex-1 bg-slate-800 rounded-full"></div>
+          </div>
 
       {/* 2. PDF Viewer Container */}
       <div className="shadow-2xl shadow-slate-400/20 dark:shadow-black/50 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden mb-12 bg-white">

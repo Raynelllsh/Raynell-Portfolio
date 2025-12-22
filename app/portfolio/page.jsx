@@ -1,116 +1,108 @@
 import Image from "next/image";
 
-import HKOLogo from "@/public/assets/pictures/Hong_Kong_Observatory_Logo.svg";
-import PSLogo from "@/public/assets/pictures/Primal-solutions.png";
-import GEOLogo from "@/public/assets/pictures/polyugeo_logo.jpg";
-import BMCLogo from "@/public/assets/pictures/engl_new.png";
-import MonopolyLogo from "@/public/assets/pictures/monopoly.png";
-import TMSLogo from "@/public/assets/pictures/task.png";
-import OSSLogo from "@/public/assets/pictures/online-shopping.png";
-import ETFLogo from "@/public/assets/pictures/etf.png";
-import MSALogo from "@/public/assets/pictures/MSA.jpg";
-import APSSLogo from "@/public/assets/pictures/APSS.jpg";
+const HKOLogo = '/assets/pictures/Hong_Kong_Observatory_Logo.svg';
+const PSLogo = '/assets/pictures/Primal-solutions.png';
+const GEOLogo = '/assets/pictures/polyugeo_logo.jpg';
+const BMCLogo = '/assets/pictures/engl_new.png';
+const MonopolyLogo = '/assets/pictures/monopoly.png';
+const TMSLogo = '/assets/pictures/task.png';
+const OSSLogo = '/assets/pictures/online-shopping.png';
+const ETFLogo = '/assets/pictures/etf.png';
+const MSALogo = '/assets/pictures/MSA.jpg';
+const APSSLogo = '/assets/pictures/APSS.jpg';
+const AlphabagLogo = '/assets/pictures/alphabag-logo.png';
 
-const EventBox = ({ image, name, description, role }) => (
-  <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border border-gray-100 group">
-    <div className="h-48 bg-gray-50 flex items-center justify-center p-6 relative">
-      <div className="relative w-full h-full">
-        <Image
-          src={image}
-          alt={name}
-          fill
-          className="object-contain group-hover:scale-105 transition-transform duration-300"
-        />
-      </div>
+const EventBox = ({ image, name }) => (
+  <div className="
+    group
+    relative
+    w-64 h-64
+    flex flex-col items-center justify-center 
+    p-6 
+    bg-white 
+    rounded-3xl 
+    shadow-lg 
+    border-2 border-slate-100 
+    transition-all duration-300 
+    hover:border-yellow-400 hover:shadow-[0_0_25px_rgba(250,204,21,0.5)] hover:-translate-y-2
+  ">
+    <div className="relative w-24 h-24 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+      <Image
+        src={image}
+        alt={name}
+        fill
+        className="object-contain p-1"
+      />
     </div>
-    <div className="p-6">
-      <h3 className="text-xl font-bold text-gray-800 mb-2">{name}</h3>
-      {role && (
-        <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mb-3">
-          {role}
-        </span>
-      )}
-      <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
-    </div>
+
+    <div className="w-20 h-1.5 bg-slate-200 my-5 rounded-full group-hover:bg-yellow-400 transition-colors duration-300"></div>
+
+    <span className="text-xl font-bold text-slate-800 text-center">
+      {name}
+    </span>
   </div>
 );
 
-export default function Portfolio() {
-  const experiences = [
-    {
-      name: "Hong Kong Observatory",
-      img: HKOLogo,
-      role: "Summer Intern",
-      desc: "Developed a Python program to automate the conversion of inconsistent excel rainfall records into a standardized format.",
-    },
-    {
-      name: "Primal Solution",
-      img: PSLogo,
-      role: "Part-time Programmer",
-      desc: "Developed a web portal for warehouse management using React and C# .NET Core, implementing role-based access control.",
-    },
-    {
-      name: "PolyU Dept of LSGI",
-      img: GEOLogo,
-      role: "Part-time Student Helper",
-      desc: "Enhanced the Smart Tree Management System using React, creating admin and user interfaces for tree data management.",
-    },
-  ];
+const Eventboxes = [
+  {
+    title: "Work Experience",
+    skills: [
+      { name: "Alphabag", image: AlphabagLogo },
+      { name: "Hong Kong Observatory", image: HKOLogo },
+      { name: "Primal Solutions", image: PSLogo },
+      { name: "GEO", image: GEOLogo },
+      { name: "BMC Facilitator", image: BMCLogo },
+    ],
+  },
+  {
+    title: "Projects",
+    skills: [
+      { name: "Task Management System", image: TMSLogo },
+      { name: "Monopoly", image: MonopolyLogo },
+      { name: "Online Shopping System", image: OSSLogo },
+      { name: "ETF Predicition System", image: ETFLogo },
+    ],
+  },
+  {
+    title: "Volunteer Experience",
+    skills: [
+      { name: "Service Learning", image: APSSLogo },
+      { name: "MSA Vice President", image: MSALogo },
+    ],
+  },
+];
 
-  const projects = [
-    {
-      name: "Task Management System",
-      img: TMSLogo,
-      desc: "A MERN stack application allowing users to manage tasks with drag-and-drop functionality.",
-    },
-    {
-      name: "Online Shopping System",
-      img: OSSLogo,
-      desc: "E-commerce platform with cart and checkout features built with Java Servlets and JSP.",
-    },
-    {
-      name: "Monopoly Game",
-      img: MonopolyLogo,
-      desc: "A text-based multiplayer Monopoly game developed in C++ emphasizing OOP principles.",
-    },
-    {
-      name: "MSA Analysis",
-      img: MSALogo,
-      desc: "Analyzed MSA sequences to identify conserved regions using Python and Biopython libraries.",
-    },
-  ];
-
+export default function Home() {
   return (
-    <div className="container mx-auto px-4 py-8 space-y-12">
-      <section>
-        <h2 className="text-3xl font-bold text-gray-800 mb-8 flex items-center gap-3">
-          <span className="w-2 h-8 bg-blue-600 rounded-full"></span>
-          Work Experience
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {experiences.map((e, i) => (
-            <EventBox
-              key={i}
-              image={e.img}
-              name={e.name}
-              role={e.role}
-              description={e.desc}
-            />
+    <main className="min-h-screen flex flex-col items-center pt-40 pb-20 px-6 bg-black text-white">
+
+      {/* 1. Technologies Section */}
+      <section className="max-w-6xl mx-auto mb-24 w-full">
+        {/* NEW TITLE STYLE */}
+        <div className="flex items-center gap-4 mb-10">
+            <h2 className="text-4xl font-bold tracking-tight">
+              My <span className="text-yellow-500">Portfolio</span>
+            </h2>
+            <div className="h-1 flex-1 bg-slate-800 rounded-full"></div>
+          </div>
+
+        <div className="space-y-20">
+          {Eventboxes.map((category, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <h3 className="text-2xl font-semibold text-white mb-10 border-b-4 border-yellow-400 pb-2 px-8">
+                {category.title}
+              </h3>
+              
+              <div className="flex flex-wrap justify-center gap-8 w-full">
+                {category.skills.map((skill, idx) => (
+                  <EventBox key={idx} {...skill} />
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
 
-      <section>
-        <h2 className="text-3xl font-bold text-gray-800 mb-8 flex items-center gap-3">
-          <span className="w-2 h-8 bg-green-600 rounded-full"></span>
-          Projects
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((p, i) => (
-            <EventBox key={i} image={p.img} name={p.name} description={p.desc} />
-          ))}
-        </div>
-      </section>
-    </div>
+    </main>
   );
 }

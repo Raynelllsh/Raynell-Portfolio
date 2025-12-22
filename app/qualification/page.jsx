@@ -26,7 +26,6 @@ const AnsibleLogo = "/assets/pictures/ansible-logo.svg";
 const DockerLogo = "/assets/pictures/docker-logo.svg";
 const JenkinsLogo = "/assets/pictures/jenkins-logo.svg";
 
-
 // --- Components ---
 
 // 1. Skill Box
@@ -119,7 +118,7 @@ const skillCategories = [
     ],
   },
   {
-    title: "Frontend Development",
+    title: "Frontend Frameworks",
     skills: [
       { name: "React.js", image: ReactLogo },
       { name: "Tailwind CSS", image: TailwindLogo },
@@ -147,7 +146,7 @@ const skillCategories = [
       { name: "Git", image: GitLogo },
       { name: "AWS", image: AWSLogo },
       { name: "Vite", image: ViteLogo },
-      { name: "Linux", image: LinuxLogo },
+      { name: "Linux Commands", image: LinuxLogo },
       { name: "Terraform", image: TerraformLogo },
       { name: "Ansible", image: AnsibleLogo },
       { name: "Docker", image: DockerLogo },
@@ -183,18 +182,22 @@ const qualifications = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-8 md:p-12 lg:p-24 bg-slate-50 dark:bg-slate-950">
-      
+    <main className="min-h-screen flex flex-col items-center pt-40 pb-20 px-6 bg-black text-white">
+
       {/* 1. Technologies Section */}
-      <section className="max-w-7xl mx-auto mb-24">
-        <h2 className="text-4xl font-bold text-center mb-16 text-slate-800 dark:text-white">
-          Technologies & Skills
-        </h2>
+      <section className="max-w-6xl mx-auto mb-24 w-full">
+        {/* NEW TITLE STYLE */}
+        <div className="flex items-center gap-4 mb-10">
+            <h2 className="text-4xl font-bold tracking-tight">
+              Technologies & <span className="text-yellow-500">Skills</span>
+            </h2>
+            <div className="h-1 flex-1 bg-slate-800 rounded-full"></div>
+          </div>
 
         <div className="space-y-20">
           {skillCategories.map((category, index) => (
             <div key={index} className="flex flex-col items-center">
-              <h3 className="text-2xl font-semibold text-slate-600 dark:text-slate-300 mb-10 border-b-4 border-yellow-400 pb-2 px-8">
+              <h3 className="text-2xl font-semibold text-white mb-10 border-b-4 border-yellow-400 pb-2 px-8">
                 {category.title}
               </h3>
               
@@ -209,10 +212,14 @@ export default function Home() {
       </section>
 
       {/* 2. Qualifications Section */}
-      <section className="max-w-7xl mx-auto pb-20">
-        <h2 className="text-4xl font-bold text-center mb-16 text-slate-800 dark:text-white">
-          Qualifications & Certifications (Click to View!)
-        </h2>
+      <section className="max-w-6xl mx-auto pb-20 w-full">
+        {/* NEW TITLE STYLE */}
+        <div className="flex items-center gap-4 mb-10">
+            <h2 className="text-4xl font-bold tracking-tight">
+              Qualifications & <span className="text-yellow-500">Certification</span>
+            </h2>
+            <div className="h-1 flex-1 bg-slate-800 rounded-full"></div>
+          </div>
         
         <div className="flex flex-wrap justify-center gap-8">
           {qualifications.map((qual, index) => (
