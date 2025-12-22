@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .home-background {
+    /* Ensure this image is in public/assets/pictures/ */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("/assets/pictures/bio-page-pic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Typewriter Animation */
+  .typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid white; /* Cursor color */
+    width: 0;
+    /* steps(21) matches the character count of "Striving to be better" */
+    animation: typewriter-cycle 6s steps(21, end) infinite,
+      blink-caret 0.75s step-end infinite;
+  }
+
+  /* Gradient Text Utility */
+  .gradient-text {
+    background: linear-gradient(to right, #ef4444, #eab308); /* Red-500 to Yellow-500 */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  @keyframes typewriter-cycle {
+    0% { width: 0; }
+    40% { width: 100%; } /* Type */
+    60% { width: 100%; } /* Pause */
+    90% { width: 0; }    /* Delete */
+    100% { width: 0; }
+  }
+
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+  }
 }
