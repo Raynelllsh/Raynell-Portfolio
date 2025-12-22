@@ -1,32 +1,36 @@
+"use client";
+
 import Image from "next/image";
 
 // --- Asset Imports ---
-basepath = "/Raynell-Portfolio"; // Must match next.config.mjs
+// FIX 1: Add 'const' and fix the capitalization (optional but recommended)
+const basePath = "/raynells-website"; // Must match next.config.mjs
 
-const PythonLogo = `${basepath}/assets/pictures/Python-logo.png`;
-const CppLogo = `${basepath}/assets/pictures/ISO_C++_Logo.png`;
-const JavaLogo = `${basepath}/assets/pictures/java-logo.svg`;
-const JSLogo = `${basepath}/assets/pictures/javascript-logo.svg`;
-const ReactLogo = `${basepath}/assets/pictures/react.svg`;
-const TailwindLogo = `${basepath}/assets/pictures/Tailwind_CSS_Logo.png`;
-const MySQLLogo = `${basepath}/assets/pictures/mysql-logo.svg`;
-const GitLogo = `${basepath}/assets/pictures/git-icon-logo.svg`;
-const ViteLogo = `${basepath}/assets/pictures/vitejs.svg`;
-const AWSLogo = `${basepath}/assets/pictures/aws.svg`;
-const SCLogo = `${basepath}/assets/pictures/simplified-chinese-character.png`;
-const EngLogo = `${basepath}/assets/pictures/letter-a-text-variant.svg`;
-const TCLogo = `${basepath}/assets/pictures/Traditional_chinese.svg.png`;
-const ExpressLogo = `${basepath}/assets/pictures/express-js-logo-png_seeklogo-339850.png`;
-const FlaskLogo = `${basepath}/assets/pictures/Flask.svg`;
-const MongoLogo = `${basepath}/assets/pictures/mongodb-logo.svg`;
-const TypeScriptLogo = `${basepath}/assets/pictures/typescript-logo.svg`;
-const NextLogo = `${basepath}/assets/pictures/next-logo.svg`;
-const FirebaseLogo = `${basepath}/assets/pictures/firebase-logo.svg`;
-const LinuxLogo = `${basepath}/assets/pictures/linux-logo.svg`;
-const TerraformLogo = `${basepath}/assets/pictures/terraform-logo.svg`;
-const AnsibleLogo = `${basepath}/assets/pictures/ansible-logo.svg`;
-const DockerLogo = `${basepath}/assets/pictures/docker-logo.svg`;
-const JenkinsLogo = `${basepath}/assets/pictures/jenkins-logo.svg`;
+// FIX 2: Use the variable correctly
+const PythonLogo = `${basePath}/assets/pictures/Python-logo.png`;
+const CppLogo = `${basePath}/assets/pictures/ISO_C++_Logo.png`;
+const JavaLogo = `${basePath}/assets/pictures/java-logo.svg`;
+const JSLogo = `${basePath}/assets/pictures/javascript-logo.svg`;
+const ReactLogo = `${basePath}/assets/pictures/react.svg`;
+const TailwindLogo = `${basePath}/assets/pictures/Tailwind_CSS_Logo.png`;
+const MySQLLogo = `${basePath}/assets/pictures/mysql-logo.svg`;
+const GitLogo = `${basePath}/assets/pictures/git-icon-logo.svg`;
+const ViteLogo = `${basePath}/assets/pictures/vitejs.svg`;
+const AWSLogo = `${basePath}/assets/pictures/aws.svg`;
+const SCLogo = `${basePath}/assets/pictures/simplified-chinese-character.png`;
+const EngLogo = `${basePath}/assets/pictures/letter-a-text-variant.svg`;
+const TCLogo = `${basePath}/assets/pictures/Traditional_chinese.svg.png`;
+const ExpressLogo = `${basePath}/assets/pictures/express-js-logo-png_seeklogo-339850.png`;
+const FlaskLogo = `${basePath}/assets/pictures/Flask.svg`;
+const MongoLogo = `${basePath}/assets/pictures/mongodb-logo.svg`;
+const TypeScriptLogo = `${basePath}/assets/pictures/typescript-logo.svg`;
+const NextLogo = `${basePath}/assets/pictures/next-logo.svg`;
+const FirebaseLogo = `${basePath}/assets/pictures/firebase-logo.svg`;
+const LinuxLogo = `${basePath}/assets/pictures/linux-logo.svg`;
+const TerraformLogo = `${basePath}/assets/pictures/terraform-logo.svg`;
+const AnsibleLogo = `${basePath}/assets/pictures/ansible-logo.svg`;
+const DockerLogo = `${basePath}/assets/pictures/docker-logo.svg`;
+const JenkinsLogo = `${basePath}/assets/pictures/jenkins-logo.svg`;
 
 // --- Components ---
 
@@ -51,6 +55,8 @@ const SkillBox = ({ image, name }) => (
         alt={name}
         fill
         className="object-contain p-1"
+        // Add 'unoptimized' if using static export with next/image
+        unoptimized
       />
     </div>
 
@@ -62,7 +68,7 @@ const SkillBox = ({ image, name }) => (
   </div>
 );
 
-// 2. Qualification Box (UPDATED: Clickable Link)
+// 2. Qualification Box
 const QualificationBox = ({ title, issuer, date, link }) => (
   <a 
     href={link}
@@ -90,6 +96,7 @@ const QualificationBox = ({ title, issuer, date, link }) => (
         width={48} 
         height={48} 
         className="object-contain"
+        unoptimized // Recommended for GitHub Pages
       />
     </div>
     
